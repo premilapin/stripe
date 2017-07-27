@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form action="/charge" method="post">
+    <article>
+      <label>PREMILAPIN支付系统</label>
+      <label>请输入支付金额</label>
+        <input type="text" name="amount">
+      <label>欧元</label>
+    </article>
+
+    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="{{ key }}"  data-locale="zh"></script>
+  </form>
+{% endblock %}
